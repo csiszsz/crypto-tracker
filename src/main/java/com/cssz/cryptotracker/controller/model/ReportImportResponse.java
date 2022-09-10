@@ -4,12 +4,12 @@ import com.cssz.cryptotracker.repository.model.CDCTransaction;
 import lombok.Builder;
 import lombok.Data;
 
-import java.util.List;
+import java.util.Set;
 
 @Data
 @Builder
-public class FileUploadResponse {
+public class ReportImportResponse {
     private String fileName;
     private int nrOfRecords;
-    private List<CDCTransaction> transactions;
+    private Set<CDCTransaction> transactions;
 }

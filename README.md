@@ -1,10 +1,11 @@
 # Crypto Portfolio Tracker (CDC)
 
 ## Features
-- [x] import exported CDC csv file
-- [x] store transactions in Postgres db
-- [x] calculate total invested money
-- [x] calculate total invested money per asset
+- [x] import exported CDC report from csv file
+- [x] store report and transactions in Postgres db
+- [x] prevent importing the same report multiple times
+- [ ] calculate total invested money
+- [ ] calculate total invested money per asset
 - [ ] calculate all time profit and loss
 - [ ] calculate all time profit and loss per asset
 

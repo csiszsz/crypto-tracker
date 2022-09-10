@@ -1,17 +1,17 @@
 package com.cssz.cryptotracker.repository.model;
 
-import lombok.Builder;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
 @Table(name = "cdc_transaction")
 public class CDCTransaction {
@@ -31,5 +31,9 @@ public class CDCTransaction {
     private BigDecimal nativeAmountUsd;
     private String transactionKind;
     private String transactionHash;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private CDCReport report;
 
 }
