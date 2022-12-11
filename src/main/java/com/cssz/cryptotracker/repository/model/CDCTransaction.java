@@ -23,11 +23,15 @@ public class CDCTransaction {
     private LocalDateTime timestamp;
     private String description;
     private String currency;
+    @Column(precision = 19, scale = 4)
     private BigDecimal amount;
     private String toCurrency;
+    @Column(precision = 19, scale = 4)
     private BigDecimal toAmount;
     private String nativeCurrency;
+    @Column(precision = 19, scale = 4)
     private BigDecimal nativeAmount;
+    @Column(precision = 19, scale = 4)
     private BigDecimal nativeAmountUsd;
     private String transactionKind;
     private String transactionHash;
